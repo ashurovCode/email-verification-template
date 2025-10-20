@@ -4,233 +4,455 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Email Verification Template - Preview</title>
+    <title>Verify Your Email Address</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      /* Reset styles */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
       }
       body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        padding: 20px;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
       }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
       }
-      .header {
-        text-align: center;
-        color: white;
-        margin-bottom: 40px;
-        padding: 40px 20px;
-      }
-      .header h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-        font-weight: 700;
-      }
-      .header p {
-        font-size: 20px;
-        opacity: 0.9;
-      }
-      .preview-section {
-        background: white;
-        border-radius: 12px;
-        padding: 40px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        margin-bottom: 30px;
-      }
-      .preview-section h2 {
-        color: #333;
-        margin-bottom: 20px;
-        font-size: 28px;
-      }
-      .preview-section p {
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
-      .button-group {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin-top: 30px;
-      }
-      .btn {
-        display: inline-block;
-        padding: 14px 32px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 600;
-        transition: transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-      }
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-      }
-      .btn-secondary {
-        background: white;
-        color: #667eea;
-        border: 2px solid #667eea;
-        box-shadow: none;
-      }
-      .btn-secondary:hover {
-        background: #f8f9ff;
-      }
-      iframe {
-        width: 100%;
-        height: 800px;
-        border: none;
-        border-radius: 8px;
-        background: white;
-      }
-      .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-      }
-      .feature-card {
-        background: #f8f9ff;
-        padding: 25px;
-        border-radius: 8px;
-        border-left: 4px solid #667eea;
-      }
-      .feature-card h3 {
-        color: #333;
-        margin-bottom: 10px;
-        font-size: 18px;
-      }
-      .feature-card p {
-        color: #666;
-        font-size: 14px;
-        margin: 0;
-      }
-      .code-section {
-        background: #1e1e1e;
-        color: #d4d4d4;
-        padding: 20px;
-        border-radius: 8px;
-        overflow-x: auto;
-        margin-top: 20px;
-      }
-      .code-section code {
-        font-family: 'Courier New', monospace;
-        font-size: 14px;
-      }
-      @media (max-width: 768px) {
-        .header h1 {
-          font-size: 32px;
+
+      /* MOBILE STYLES */
+      @media screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+          margin: auto !important;
         }
-        .header p {
-          font-size: 16px;
+        .fluid {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
         }
-        .preview-section {
-          padding: 20px;
+        .stack-column,
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
         }
-        .button-group {
-          flex-direction: column;
+        .center-on-narrow {
+          text-align: center !important;
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none !important;
         }
-        .btn {
-          width: 100%;
-          text-align: center;
+        table.center-on-narrow {
+          display: inline-block !important;
+        }
+        .button-td,
+        .button-a {
+          width: 100% !important;
         }
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>📧 Email Verification Template</h1>
-        <p>Modern, Responsive & Ready to Use</p>
-      </div>
-
-      <div class="preview-section">
-        <h2>Live Preview</h2>
-        <p>
-          This is a professional email verification template designed for user
-          registration workflows. The template is fully responsive and
-          compatible with all major email clients.
-        </p>
-        <iframe src="email-verification.html"></iframe>
-      </div>
-
-      <div class="preview-section">
-        <h2>✨ Features</h2>
-        <div class="features">
-          <div class="feature-card">
-            <h3>📱 Responsive Design</h3>
-            <p>Works perfectly on desktop, tablet, and mobile devices</p>
-          </div>
-          <div class="feature-card">
-            <h3>🎨 Modern UI</h3>
-            <p>Clean gradient design with professional styling</p>
-          </div>
-          <div class="feature-card">
-            <h3>✉️ Email Compatible</h3>
-            <p>Tested with Gmail, Outlook, Apple Mail, and more</p>
-          </div>
-          <div class="feature-card">
-            <h3>🔧 Easy to Customize</h3>
-            <p>Simple placeholder system for dynamic content</p>
-          </div>
-          <div class="feature-card">
-            <h3>💻 Inline CSS</h3>
-            <p>All styles inline for maximum compatibility</p>
-          </div>
-          <div class="feature-card">
-            <h3>♿ Accessible</h3>
-            <p>Follows email accessibility best practices</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="preview-section">
-        <h2>🚀 Quick Start</h2>
-        <p>
-          Replace the <code>{{verification_link}}</code> placeholder with your
-          actual verification URL:
-        </p>
-        <div class="code-section">
-          <code>
-const verificationLink = `https://yoursite.com/verify?token=${token}`;<br>
-htmlTemplate = htmlTemplate.replace(/{{verification_link}}/g, verificationLink);
-          </code>
-        </div>
-
-        <div class="button-group">
-          <a
-            href="email-verification.html"
-            target="_blank"
-            class="btn"
-            >View Template</a
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    "
+  >
+    <!-- Main Container -->
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      width="100%"
+      style="margin: 0; padding: 0; background-color: #f4f4f4"
+    >
+      <tr>
+        <td style="padding: 40px 15px">
+          <!-- Email Container -->
+          <table
+            role="presentation"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            width="600"
+            class="email-container"
+            style="
+              margin: 0 auto;
+              background-color: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
           >
-          <a
-            href="https://github.com/ashurovCode/email-verification-template"
-            target="_blank"
-            class="btn btn-secondary"
-            >View on GitHub</a
-          >
-        </div>
-      </div>
+            <!-- Header with Logo/Brand -->
+            <tr>
+              <td
+                style="
+                  padding: 0;
+                  text-align: center;
+                  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                  border-radius: 8px 8px 0 0;
+                  position: relative;
+                "
+              >
+                <!-- Top decorative bar -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td style="padding: 50px 40px 30px 40px; text-align: center;">
+                      <!-- Logo/Brand with icon -->
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                        <tr>
+                          <td style="text-align: center;">
+                            <div style="display: inline-block; margin-bottom: 15px;">
+                              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="24" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="2"/>
+                                <path d="M15 15h20c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H15c-1.1 0-2-.9-2-2V17c0-1.1.9-2 2-2z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M37 17L25 27L13 17" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">
+                            <h1
+                              style="
+                                margin: 0;
+                                font-size: 32px;
+                                font-weight: 700;
+                                color: #ffffff;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                              "
+                            >
+                              Bites
+                            </h1>
+                            <p style="margin: 8px 0 0 0; font-size: 14px; color: rgba(255,255,255,0.9); letter-spacing: 2px; text-transform: uppercase; font-weight: 500;">
+                              Email Verification
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- Wave decoration -->
+                  <tr>
+                    <td style="padding: 0; line-height: 0;">
+                      <svg width="600" height="40" viewBox="0 0 600 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%; height: 40px;">
+                        <path d="M0,20 Q150,0 300,20 T600,20 L600,40 L0,40 Z" fill="#ffffff"/>
+                      </svg>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
-      <div class="preview-section">
-        <h2>📋 What's Included</h2>
-        <ul style="color: #666; line-height: 2; margin-left: 20px;">
-          <li>Responsive HTML email template</li>
-          <li>Inline CSS for email client compatibility</li>
-          <li>Professional gradient design</li>
-          <li>Verification button with fallback link</li>
-          <li>Mobile-optimized layout</li>
-          <li>Customizable colors and branding</li>
-        </ul>
-      </div>
-    </div>
+            <!-- Icon Badge -->
+            <tr>
+              <td style="padding: 20px 40px 0 40px; text-align: center">
+                <div
+                  style="
+                    display: inline-block;
+                    width: 90px;
+                    height: 90px;
+                    background: linear-gradient(
+                      135deg,
+                      #667eea 0%,
+                      #764ba2 100%
+                    );
+                    border-radius: 50%;
+                    padding: 22px;
+                    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+                    position: relative;
+                  "
+                >
+                  <svg
+                    width="46"
+                    height="46"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.7088 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+                      stroke="white"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22 4L12 14.01L9 11.01"
+                      stroke="white"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td style="padding: 30px 40px">
+                <h2
+                  style="
+                    margin: 0 0 20px 0;
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #333333;
+                    text-align: center;
+                  "
+                >
+                  Verify Your Email Address
+                </h2>
+                <p
+                  style="
+                    margin: 0 0 20px 0;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #666666;
+                    text-align: center;
+                  "
+                >
+                  Thank you for signing up! To complete your registration,
+                  please verify your email address by clicking the button below.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Button -->
+            <tr>
+              <td style="padding: 0 40px 40px 40px">
+                <table
+                  role="presentation"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="100%"
+                >
+                  <tr>
+                    <td style="text-align: center">
+                      <a
+                        href="{{verification_link}}"
+                        style="
+                          display: inline-block;
+                          padding: 16px 48px;
+                          background: linear-gradient(
+                            135deg,
+                            #667eea 0%,
+                            #764ba2 100%
+                          );
+                          color: #ffffff;
+                          font-size: 16px;
+                          font-weight: 600;
+                          text-decoration: none;
+                          border-radius: 6px;
+                          box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+                          transition: all 0.3s ease;
+                        "
+                      >
+                        Verify Email Address
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Alternative Link -->
+            <tr>
+              <td style="padding: 0 40px 30px 40px">
+                <p
+                  style="
+                    margin: 0 0 10px 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #999999;
+                    text-align: center;
+                  "
+                >
+                  Or copy and paste this link into your browser:
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #667eea;
+                    text-align: center;
+                    word-break: break-all;
+                  "
+                >
+                  {{verification_link}}
+                </p>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td style="padding: 0 40px">
+                <table
+                  role="presentation"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="100%"
+                >
+                  <tr>
+                    <td style="border-top: 1px solid #eeeeee"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Additional Info -->
+            <tr>
+              <td style="padding: 30px 40px">
+                <p
+                  style="
+                    margin: 0 0 15px 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #666666;
+                  "
+                >
+                  <strong>Why did I receive this email?</strong>
+                </p>
+                <p
+                  style="
+                    margin: 0 0 20px 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #999999;
+                  "
+                >
+                  This email was sent to you because someone (hopefully you!)
+                  created an account using this email address. If you didn't
+                  create an account, you can safely ignore this email.
+                </p>
+                <p
+                  style="
+                    margin: 0 0 5px 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #666666;
+                  "
+                >
+                  <strong>Link expires in:</strong> 24 hours
+                </p>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                style="
+                  padding: 30px 40px;
+                  background-color: #f9f9f9;
+                  border-radius: 0 0 8px 8px;
+                "
+              >
+                <p
+                  style="
+                    margin: 0 0 10px 0;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #999999;
+                    text-align: center;
+                  "
+                >
+                  © 2024 Bites. All rights reserved.
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #999999;
+                    text-align: center;
+                  "
+                >
+                  123 Main Street, City, State 12345
+                </p>
+                <table
+                  role="presentation"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="100%"
+                  style="margin-top: 15px"
+                >
+                  <tr>
+                    <td style="text-align: center">
+                      <a
+                        href="#"
+                        style="
+                          color: #667eea;
+                          text-decoration: none;
+                          font-size: 12px;
+                          margin: 0 10px;
+                        "
+                        >Privacy Policy</a
+                      >
+                      <a
+                        href="#"
+                        style="
+                          color: #667eea;
+                          text-decoration: none;
+                          font-size: 12px;
+                          margin: 0 10px;
+                        "
+                        >Terms of Service</a
+                      >
+                      <a
+                        href="#"
+                        style="
+                          color: #667eea;
+                          text-decoration: none;
+                          font-size: 12px;
+                          margin: 0 10px;
+                        "
+                        >Contact Us</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>

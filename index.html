@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Email Verification Template - Preview</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 20px;
+      }
+      .header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .header p {
+        font-size: 20px;
+        opacity: 0.9;
+      }
+      .preview-section {
+        background: white;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+      .preview-section h2 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+      .preview-section p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .button-group {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 14px 32px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      }
+      .btn-secondary {
+        background: white;
+        color: #667eea;
+        border: 2px solid #667eea;
+        box-shadow: none;
+      }
+      .btn-secondary:hover {
+        background: #f8f9ff;
+      }
+      iframe {
+        width: 100%;
+        height: 800px;
+        border: none;
+        border-radius: 8px;
+        background: white;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .feature-card {
+        background: #f8f9ff;
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+      }
+      .feature-card h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .feature-card p {
+        color: #666;
+        font-size: 14px;
+        margin: 0;
+      }
+      .code-section {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-top: 20px;
+      }
+      .code-section code {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+      }
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 32px;
+        }
+        .header p {
+          font-size: 16px;
+        }
+        .preview-section {
+          padding: 20px;
+        }
+        .button-group {
+          flex-direction: column;
+        }
+        .btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📧 Email Verification Template</h1>
+        <p>Modern, Responsive & Ready to Use</p>
+      </div>
+
+      <div class="preview-section">
+        <h2>Live Preview</h2>
+        <p>
+          This is a professional email verification template designed for user
+          registration workflows. The template is fully responsive and
+          compatible with all major email clients.
+        </p>
+        <iframe src="email-verification.html"></iframe>
+      </div>
+
+      <div class="preview-section">
+        <h2>✨ Features</h2>
+        <div class="features">
+          <div class="feature-card">
+            <h3>📱 Responsive Design</h3>
+            <p>Works perfectly on desktop, tablet, and mobile devices</p>
+          </div>
+          <div class="feature-card">
+            <h3>🎨 Modern UI</h3>
+            <p>Clean gradient design with professional styling</p>
+          </div>
+          <div class="feature-card">
+            <h3>✉️ Email Compatible</h3>
+            <p>Tested with Gmail, Outlook, Apple Mail, and more</p>
+          </div>
+          <div class="feature-card">
+            <h3>🔧 Easy to Customize</h3>
+            <p>Simple placeholder system for dynamic content</p>
+          </div>
+          <div class="feature-card">
+            <h3>💻 Inline CSS</h3>
+            <p>All styles inline for maximum compatibility</p>
+          </div>
+          <div class="feature-card">
+            <h3>♿ Accessible</h3>
+            <p>Follows email accessibility best practices</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="preview-section">
+        <h2>🚀 Quick Start</h2>
+        <p>
+          Replace the <code>{{verification_link}}</code> placeholder with your
+          actual verification URL:
+        </p>
+        <div class="code-section">
+          <code>
+const verificationLink = `https://yoursite.com/verify?token=${token}`;<br>
+htmlTemplate = htmlTemplate.replace(/{{verification_link}}/g, verificationLink);
+          </code>
+        </div>
+
+        <div class="button-group">
+          <a
+            href="email-verification.html"
+            target="_blank"
+            class="btn"
+            >View Template</a
+          >
+          <a
+            href="https://github.com/ashurovCode/email-verification-template"
+            target="_blank"
+            class="btn btn-secondary"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+
+      <div class="preview-section">
+        <h2>📋 What's Included</h2>
+        <ul style="color: #666; line-height: 2; margin-left: 20px;">
+          <li>Responsive HTML email template</li>
+          <li>Inline CSS for email client compatibility</li>
+          <li>Professional gradient design</li>
+          <li>Verification button with fallback link</li>
+          <li>Mobile-optimized layout</li>
+          <li>Customizable colors and branding</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
